@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge';
 
 const App = () => {
 	const API_URL = 'https://zenquotes.io/api/quotes/';
@@ -34,13 +35,34 @@ const App = () => {
 	return (
 		<Container className="app">
 			<Row className="min-vh-100">
-				<Col className="align-self-center text-center">
+				<Col xs={12} className="align-self-center">
 					<div
 						dangerouslySetInnerHTML={{
 							__html: quotes[currentQuote],
 						}}
 					></div>
-					<Button onClick={nextQuote}>Next Quote</Button>
+					<Button className="mt-5" onClick={nextQuote}>
+						Next Quote
+					</Button>
+				</Col>
+				<Col xs={12} className="text-center">
+					<Badge className="shadow-lg bg-secondary">
+						<a
+							target="_blank"
+							href="https://icons8.com/icon/Skp77DtGmAEV/motivation-daily-quotes"
+							rel="noreferrer"
+						>
+							Motivation Daily Quotes
+						</a>{' '}
+						icon by{' '}
+						<a
+							target="_blank"
+							rel="noreferrer"
+							href="https://icons8.com"
+						>
+							Icons8
+						</a>
+					</Badge>
 				</Col>
 			</Row>
 		</Container>
