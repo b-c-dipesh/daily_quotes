@@ -26,9 +26,11 @@ const App = () => {
 
 	return (
 		<Container className="app">
-			<Row className="min-vh-100">
-				<Col xs={12} className="align-self-center">
+			<Row className="mt-5">
+				<Col xs={12} className="align-self-center my-5">
 					<div
+						style={{ minHeight: '200px', maxHeight: '200px' }}
+						className="shadow rounded p-5"
 						dangerouslySetInnerHTML={{
 							__html: quotesArray[currentQuote],
 						}}
@@ -37,8 +39,8 @@ const App = () => {
 						Next Quote
 					</Button>
 				</Col>
-				<Col xs={12} className="text-center">
-					<Badge className="shadow-lg bg-secondary">
+				<Col xs={12} className="text-center mt-5">
+					<Badge className="shadow bg-secondary">
 						<a
 							target="_blank"
 							href="https://icons8.com/icon/Skp77DtGmAEV/motivation-daily-quotes"
